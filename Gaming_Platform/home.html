@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gaming Platform</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="main-header">
+        <h1>GAMING PLATFORM</h1>
+        <a href="#" id="logoutBtn" class="logout-link">logout</a>
+    </header>
+
+    <main class="games-container">
+        <div class="games-grid">
+            <div class="game-card" onclick="window.location.href='./games/tic-tac-toe/rules.html'">
+                <img src="../assets/images/game-thumbnails/tic-tac-toe.jpeg" alt="Tic Tac Toe">
+                <h3>Tic Tac Toe</h3>
+            </div>
+
+            <div class="game-card" onclick="window.location.href='./games/sudoku/rules.html'">
+                <img src="../assets/images/game-thumbnails/sudoku.jpeg" alt="Sudoku">
+                <h3>Sudoku</h3>
+            </div>
+
+            <div class="game-card" onclick="window.location.href='./games/slide-puzzle/rules.html'">
+                <img src="../assets/images/game-thumbnails/slide-puzzle.jpeg" alt="Slide Puzzle">
+                <h3>Slide Puzzle</h3>
+            </div>
+
+            <div class="game-card" onclick="window.location.href='./games/foodle-snake/rules.html'">
+                <img src="../assets/images/game-thumbnails/snake.jpeg" alt="Foodle Snake">
+                <h3>Foodle Snake</h3>
+            </div>
+
+            <div class="game-card" onclick="window.location.href='./games/chrome-dinosaur/rules.html'">
+                <img src="../assets/images/game-thumbnails/chrome-dinasaur.jpeg" alt="Chrome Dinosaur">
+                <h3>Chrome Dinosaur</h3>
+            </div>
+
+            <div class="game-card" onclick="window.location.href='./games/flappy-bird/rules.html'">
+                <img src="../assets/images/game-thumbnails/flappy-bird.jpeg" alt="Flappy Bird">
+                <h3>Flappy Bird</h3>
+            </div>
+        </div>
+    </main>
+
+    <div class="mountains"></div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="./assets/js/firebase-config.js"></script>
+    <script src="./assets/js/session.js"></script>
+</body>
+</html>
+
+

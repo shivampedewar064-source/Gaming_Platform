@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Gaming Platform</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <header class="main-header">
+        <h1>GAMING PLATFORM</h1>
+        <a href="login.html" class="login-btn">Login</a>
+    </header>
+
+    <div class="modal-overlay">
+        <div class="auth-modal">
+            <button class="close-btn" onclick="window.location.href='index.html'">✕</button>
+            <h2>Registration</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <span class="icon">👤</span>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <span class="icon">📧</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="icon">🔒</span>
+                </div>
+                <div class="form-footer">
+                    <label>
+                        <input type="checkbox" required> I filled in the information
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+                <p class="switch-auth">
+                    I already have an Account. <a href="login.html">Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="mountains"></div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="./assets/js/firebase-config.js"></script>
+    <script src="./assets/js/auth.js"></script>
+</body>
+</html>
+
+

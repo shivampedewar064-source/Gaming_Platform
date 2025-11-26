@@ -1,0 +1,18 @@
+/* Common game rules page styling reusing main background */
+
+.home-btn {
+  border: 2px solid #ffffff;
+  padding: 12px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
