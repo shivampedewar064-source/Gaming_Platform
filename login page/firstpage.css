@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://i.pinimg.com/originals/d2/63/55/d26355a4484cf412669476a57a263abc.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    
+
+}
+
+.title1{
+    font-size: 2em ;
+    color: aliceblue;
+    user-select: none;
+}
+
+
+.about a{
+    position: relative;
+    font-size: 1.1rem;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.about a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.about a:hover::after{
+    transform: scaleX(1);
+}
+
+.about .logine{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.about .logine:hover{
+    background: white;
+    color: black;
+}
+.form{
+    color: white;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   overflow: hidden;
+   transform: scale(0);
+   transition: transform .5s ease, height .2s ease;
+}
+.form.active_logine{
+    transform: scale(1);
+
+}
+.form.active{
+    height: 520px;
+}
+.form .box{
+    width: 100%;
+    padding: 40px;
+}
+
+
+
+.form.active .box{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.form .box{
+    transform: translateX(0);
+    transition: transform .18s ease;
+}
+
+
+
+
+.form .regist{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+
+.form.active .regist{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.form .close_icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border: solid white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.box h2{
+    font-size: 2em;
+    color: aliceblue;
+    text-align: center;
+}
+
+.input_box{
+   position: relative;
+   width: 100%;
+   height: 50px;
+   border-bottom: 2px solid white; 
+   margin: 30px 0;
+}
+
+.input_box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: aliceblue;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input_box input:focus~label,
+.input_box input:valid~label {
+    top: -5px;
+}
+
+.input_box input{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input_box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: aliceblue;
+    line-height: 57px;
+}
+
+.remember{
+    font-size: .9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember a{
+    color: white;
+    text-decoration: none;
+}
+
+.remember a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.sign_in{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.sign_in p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.sign_in p a:hover{
+    text-decoration: underline;
+}
+
+
+.game_section{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+h3{
+    position: relative;
+    top: 200px;
+    right: 800px;
+    color: white;
+   
+}
