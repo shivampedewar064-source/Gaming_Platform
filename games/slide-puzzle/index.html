@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle Game</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="script3.js"></script>
+</head>
+
+<body>
+    <img id="tile" src="../slide puzzle game/oggys_images/logo image.png" alt="logo image"> 
+    <div id="board"> -->
+        <!-- <img id="0-0" src="../slide puzzle game/oggys images/1.png" alt="img1">
+        <img id="0-1" src="../slide puzzle game/oggys images/2.png" alt="img2">
+        <img id="0-2" src="../slide puzzle game/oggys images/3.png" alt="img3">
+        <img id="1-0" src="../slide puzzle game/oggys images/4.png" alt="img4">
+        <img id="1-1" src="../slide puzzle game/oggys images/5.png" alt="img5">
+        <img id="1-2" src="../slide puzzle game/oggys images/6.png" alt="img6">
+        <img id="2-0" src="../slide puzzle game/oggys images/7.png" alt="img7">
+        <img id="2-1" src="../slide puzzle game/oggys images/8.png" alt="img8">
+        <img id="2-2" src="../slide puzzle game/oggys images/9.png" alt="img9"> -->
+    <!-- </div>
+    <h1>Turns: <span id="turns">0</span></h1>
+    <button onclick="shuffleBoard()">Shuffle</button>
+    <button onclick="resetBoard()">Reset</button>
+
+    <h2>Solution</h2>
+    <img id="solution" alt="solution image" src="../slide puzzle game/oggys_images/solution img.png">
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solve the Oggy slide puzzle by arranging the tiles into the correct order."
+    />
+    <title>Slide Puzzle | Gaming Platform</title>
+    <link rel="icon" href="../../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/games.css" />
+    <link rel="stylesheet" href="./slide-puzzle.css" />
+  </head>
+  <body class="game-page">
+    <header class="game-header">
+      <div class="brand">
+        <img src="../../assets/images/logo.png" alt="Gaming Platform logo" />
+        <div>
+          <span class="brand__title">Gaming Platform</span>
+          <span class="brand__tagline">Slide Puzzle</span>
+        </div>
+      </div>
+      <nav class="primary-nav">
+        <a class="nav-link nav-link--ghost" href="../../index.html">Home</a>
+        <a class="nav-link nav-link--ghost" href="../../pages/about.html">About</a>
+        <button class="nav-link nav-link--ghost" data-logout data-show-when="signed-in" hidden>
+          Logout
+        </button>
+        <a class="nav-link nav-link--primary" href="../../pages/login.html" data-show-when="signed-out"
+          >Login</a
+        >
+      </nav>
+    </header>
+
+    <main class="game-layout">
+      <section class="game-panel">
+        <a class="back-link" href="../../index.html">&larr; Back to hub</a>
+        <h1>Oggy Slide Puzzle</h1>
+        <p class="game-card__meta">
+          Tap tiles next to the empty space to re-create the original image in the fewest moves.
+        </p>
+        <div class="buttons">
+          <button class="btn btn-secondary" onclick="shuffleBoard()">Shuffle</button>
+          <button class="btn btn-secondary" onclick="resetBoard()">Reset</button>
+        </div>
+        <p class="badge">Turns: <span id="turns">0</span></p>
+      </section>
+
+      <section class="game-frame">
+        <div class="container">
+          <div id="board"></div>
+          <div id="solution-box">
+            <h3>Solution</h3>
+            <img id="solution" src="./assets/solution img.png" alt="Solution image" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../../assets/js/firebase-config.js"></script>
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+    <script src="./slide-puzzle.js" defer></script>
+  </body>
+</html>

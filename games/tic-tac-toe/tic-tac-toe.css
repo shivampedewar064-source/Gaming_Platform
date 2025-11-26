@@ -1,0 +1,147 @@
+.game-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://i.pinimg.com/originals/d2/63/55/d26355a4484cf412669476a57a263abc.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url('https://i.pinimg.com/originals/d2/63/55/d26355a4484cf412669476a57a263abc.png') center/cover no-repeat;
+    opacity:0.15;
+    z-index:-1;
+}
+
+/* tic tac toe */
+/* body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1a0033, #000010);
+  font-family: Arial, sans-serif;
+  color: #fff;
+} */
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 15px cyan;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.game {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  border: none;
+  cursor: pointer;
+   background: radial-gradient(circle at center, #30015c, #01012d); 
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 0 15px #fff;
+  transition: 0.3s;
+}
+
+/* .box:disabled {
+  cursor: not-allowed;
+} */
+
+/* Blue O (Player) */
+.xyz {
+  color: #00ccff;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 40px #00ccff;
+}
+
+/* Orange X (Computer) */
+.abc {
+  color: #ff6600;
+  text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 40px #ff6600;
+}
+
+.reset, .newbtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 0 10px cyan;
+  transition: 0.3s;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.reset:hover, .newbtn:hover {
+  box-shadow: 0 0 20px cyan, 0 0 40px cyan;
+  justify-content: center;
+}
+
+/* Winner Message */
+.msg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#msg {
+  font-size: 2rem;
+  color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+.hide {
+  display: none;
+}
+
+/* Glowing Winning Line */
+#line {
+  position: absolute;
+  width: 320px;
+  height: 5px;
+  background: cyan;
+  box-shadow: 0 0 10px cyan, 0 0 30px cyan;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.controls{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}

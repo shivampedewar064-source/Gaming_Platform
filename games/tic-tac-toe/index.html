@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Play Tic Tac Toe against an AI opponent on the Gaming Platform."
+    />
+    <title>Tic Tac Toe | Gaming Platform</title>
+    <link rel="icon" href="../../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/games.css" />
+    <link rel="stylesheet" href="./tic-tac-toe.css" />
+  </head>
+  <body class="game-page">
+    <header class="game-header">
+      <div class="brand">
+        <img src="../../assets/images/logo.png" alt="Gaming Platform logo" />
+        <div>
+          <span class="brand__title">Gaming Platform</span>
+          <span class="brand__tagline">Tic Tac Toe</span>
+        </div>
+      </div>
+      <nav class="primary-nav">
+        <a class="nav-link nav-link--ghost" href="../../index.html">Home</a>
+        <a class="nav-link nav-link--ghost" href="../../pages/about.html">About</a>
+        <button class="nav-link nav-link--ghost" data-logout data-show-when="signed-in" hidden>
+          Logout
+        </button>
+        <a class="nav-link nav-link--primary" href="../../pages/login.html" data-show-when="signed-out"
+          >Login</a
+        >
+      </nav>
+    </header>
+
+    <main class="game-layout">
+      <section class="game-panel">
+        <a class="back-link" href="../../index.html">&larr; Back to hub</a>
+        <h1>⭕ Player vs ❌ AI</h1>
+        <p class="game-card__meta">First to three in a row wins. Tap or click to place your mark.</p>
+        <div class="game-controls">
+          <button class="btn btn-secondary reset">Reset game</button>
+          <button class="btn btn-secondary newbtn">New game</button>
+        </div>
+        <div class="msg-container hide">
+          <p id="msg">Winner</p>
+        </div>
+      </section>
+
+      <section class="game-frame">
+        <div class="container">
+          <div class="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <div id="line"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../../assets/js/firebase-config.js"></script>
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+    <script src="./tic-tac-toe.js"></script>
+  </body>
+</html>

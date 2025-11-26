@@ -1,0 +1,195 @@
+:root {
+  color-scheme: dark;
+  --auth-bg: #030712;
+  --auth-panel: rgba(15, 23, 42, 0.85);
+  --auth-border: rgba(148, 163, 184, 0.2);
+  --auth-accent: #0ef1c1;
+  --auth-text: #f8fafc;
+  --auth-muted: #94a3b8;
+  --auth-danger: #f87171;
+  --auth-font: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--auth-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Pure image background */
+  background: url("../images/game-thumbnails/main_bg.jpeg") center/cover fixed no-repeat;
+  color: var(--auth-text);
+  padding: 2rem 1rem;
+}
+
+.auth-shell {
+  width: min(960px, 100%);
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(26px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.65);
+}
+
+.auth-panel {
+  padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.auth-panel--accent {
+  background: transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.brand img {
+  width: 120px;
+}
+
+.brand__text {
+  font-size: 0.9rem;
+  color: var(--auth-muted);
+}
+
+.auth-panel h1,
+.auth-panel h2 {
+  margin: 0 0 0.5rem;
+}
+
+.auth-panel p {
+  color: var(--auth-muted);
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--auth-muted);
+}
+
+input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--auth-text);
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--auth-accent);
+  box-shadow: 0 0 0 2px rgba(14, 241, 193, 0.3);
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--auth-accent);
+  color: #020617;
+  box-shadow: 0 18px 35px rgba(14, 241, 193, 0.25);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--auth-border);
+  color: var(--auth-text);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.auth-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--auth-muted);
+}
+
+.auth-links a {
+  color: var(--auth-accent);
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  color: var(--auth-accent);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 241, 193, 0.12);
+  color: var(--auth-accent);
+  font-size: 0.85rem;
+}
+
+.message {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: var(--auth-muted);
+}
+
+.message[data-variant='error'] {
+  color: var(--auth-danger);
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+}
+

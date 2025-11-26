@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create a Gaming Platform account to keep your progress in sync."
+    />
+    <title>Sign Up | Gaming Platform</title>
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <section class="auth-panel">
+        <a class="back-link" href="../index.html">&larr; Back to home</a>
+        <div class="brand">
+          <img src="../assets/images/logo.png" alt="Gaming Platform logo" />
+          <div>
+            <strong>Gaming Platform</strong>
+            <p class="brand__text">Always-on web arcade</p>
+          </div>
+        </div>
+        <h1>Create account</h1>
+        <p>Sync progress, save favorites, and unlock your game history.</p>
+        <form id="signupForm" autocomplete="on">
+          <label for="signupName">Display name</label>
+          <input id="signupName" name="displayName" type="text" placeholder="Player One" required />
+
+          <label for="signupEmail">Email</label>
+          <input id="signupEmail" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="signupPassword">Password</label>
+          <input
+            id="signupPassword"
+            name="password"
+            type="password"
+            placeholder="At least 6 characters"
+            minlength="6"
+            required
+          />
+
+          <button class="btn btn-primary" type="submit">Create account</button>
+          <p class="auth-links">
+            Already have an account?
+            <a href="./login.html">Login</a>
+          </p>
+          <p class="message" data-auth-message="signup" hidden></p>
+        </form>
+      </section>
+
+      <section class="auth-panel auth-panel--accent">
+        <h2>Deploy-ready</h2>
+        <p>
+          Use the same Firebase Authentication flow locally and in production. Drop this folder into
+          Netlify, Vercel, or Firebase Hosting and you are good to go.
+        </p>
+        <div class="status-pill" data-auth-status>Signed out</div>
+        <button class="btn btn-ghost" onclick="location.href='./login.html'">Back to login</button>
+        <button class="btn btn-ghost" data-logout data-show-when="signed-in" hidden>Logout</button>
+      </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/auth.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about the Gaming Platform tech stack and deployment strategy."
+    />
+    <title>About | Gaming Platform</title>
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Gaming Platform logo" />
+        <div>
+          <span class="brand__title">Gaming Platform</span>
+          <span class="brand__tagline">About the project</span>
+        </div>
+      </div>
+      <nav class="primary-nav" id="siteNav" aria-label="Primary navigation">
+        <a class="nav-link nav-link--ghost" href="../index.html">Home</a>
+        <a class="nav-link nav-link--ghost" href="./profile.html">Profile</a>
+        <a class="nav-link nav-link--ghost" href="./login.html" data-show-when="signed-out"
+          >Login</a
+        >
+        <button class="nav-link nav-link--ghost" data-logout data-show-when="signed-in" hidden>
+          Logout
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="info-panels">
+        <article class="info-card">
+          <h2>What is this?</h2>
+          <p>
+            A static-first gaming hub containing six vanilla JavaScript games. Everything is
+            organized for instant hosting on Firebase, Netlify, Vercel, GitHub Pages, or Firebase
+            Hosting.
+          </p>
+          <ul>
+            <li>Games live in <code>/games/&lt;game-name&gt;</code></li>
+            <li>Shared assets and scripts live in <code>/assets</code></li>
+            <li>Pages such as login and about use <code>/pages</code></li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h2>Tech stack</h2>
+          <ul>
+            <li>Vanilla HTML, CSS, and JavaScript</li>
+            <li>Firebase Authentication (compat SDK)</li>
+            <li>Firebase Hosting routing rules</li>
+            <li>Optional deploys to Netlify / Vercel</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h2>Deployment checklist</h2>
+          <ul>
+            <li>Copy Firebase keys into <code>assets/js/firebase-config.js</code></li>
+            <li>Run <code>firebase init hosting</code> (once)</li>
+            <li>Deploy via <code>firebase deploy</code> or drag-and-drop to Netlify</li>
+            <li>Use <code>firebase.json</code> rewrites for single entry routing</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span data-current-year></span> Gaming Platform</span>
+      <div class="game-actions">
+        <a class="btn btn-secondary" href="../index.html">Home</a>
+        <a class="btn btn-secondary" href="./login.html">Login</a>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
+

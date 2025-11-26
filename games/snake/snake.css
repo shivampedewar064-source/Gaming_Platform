@@ -1,0 +1,57 @@
+.game-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+    margin: 0;
+    background-color: #2c3e50; /* Dark background */
+    font-family: Arial, sans-serif;
+    color: #ecf0f1; /* Light text */
+    background: url('https://i.pinimg.com/originals/d2/63/55/d26355a4484cf412669476a57a263abc.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #34495e; /* Slightly lighter background for container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #f1c40f; /* Yellow/Gold heading */
+    margin-bottom: 10px;
+}
+
+.score-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+#gameCanvas {
+    background-color: #1abc9c; /* Game grid background */
+    border: 5px solid #2980b9; /* Blue border */
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.Canvas{
+    background-color: #f1c40f;
+    border: #ecf0f1;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+

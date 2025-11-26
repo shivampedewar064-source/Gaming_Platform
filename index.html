@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gaming Platform - Play 6 exciting games online with Firebase authentication."
+    />
+    <title>Gaming Platform</title>
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="brand">
+        <img src="./assets/images/logo.png" alt="Gaming Platform logo" />
+        <div>
+          <span class="brand__title">Gaming Platform</span>
+        </div>
+      </div>
+      <nav class="primary-nav" id="siteNav" aria-label="Primary navigation">
+        <a class="nav-link nav-link--ghost" href="./index.html">Home</a>
+        <a class="nav-link nav-link--ghost" href="./pages/about.html">About</a>
+        <a class="nav-link nav-link--ghost" href="./pages/profile.html" data-show-when="signed-in"
+          >Profile</a
+        >
+        <a class="nav-link nav-link--ghost" href="./pages/login.html" data-show-when="signed-out"
+          >Login</a
+        >
+        <a class="nav-link nav-link--primary" href="./pages/signup.html" data-show-when="signed-out"
+          >Sign up</a
+        >
+        <button class="nav-link nav-link--ghost" data-logout data-show-when="signed-in">Logout</button>
+      </nav>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="siteNav"
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="auth-status-pill" data-auth-status>
+            You are currently signed out
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#games" data-scroll-target="#games">Explore games</a>
+            <a class="btn btn-secondary" href="#auth" data-scroll-target="#auth">Join now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-grid-section" id="games">
+        <h2>Featured games</h2>
+        <div class="game-grid">
+          <article class="game-card" data-game-card>
+            <img src="./assets/images/game-thumbnails/tic-tac-toe.png" alt="Tic Tac Toe board" />
+            <div class="game-card__body">
+              <h3>Tic Tac Toe</h3>
+              <p>Battle an AI opponent and chase the glowing win line.</p>
+              <span class="game-card__meta">HTML · CSS · JS</span>
+              <a class="btn btn-primary" href="./games/tic-tac-toe/index.html">Play now</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-game-card>
+            <img src="./assets/images/game-thumbnails/sudoku.png" alt="Sudoku puzzle" />
+            <div class="game-card__body">
+              <h3>Sudoku</h3>
+              <p>Sharpen your logic with daily generated grids.</p>
+              <span class="game-card__meta">Puzzle · Brain teaser</span>
+              <a class="btn btn-primary" href="./games/sudoku/index.html">Play now</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-game-card>
+            <img src="./assets/images/game-thumbnails/slide-puzzle.png" alt="Slide puzzle tiles" />
+            <div class="game-card__body">
+              <h3>Slide puzzle</h3>
+              <p>Assemble the Oggy-inspired layout with as few moves as possible.</p>
+              <span class="game-card__meta">15 puzzle</span>
+              <a class="btn btn-primary" href="./games/slide-puzzle/index.html">Play now</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-game-card>
+            <img src="./assets/images/game-thumbnails/snake.png" alt="Snake game screenshot" />
+            <div class="game-card__body">
+              <h3>Snake</h3>
+              <p>Retro snake with keyboard controls and arcade styling.</p>
+              <span class="game-card__meta">Arcade classic</span>
+              <a class="btn btn-primary" href="./games/snake/index.html">Play now</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-game-card>
+            <img src="./assets/images/game-thumbnails/chrome-dinosaur.png" alt="Chrome dinosaur run" />
+            <div class="game-card__body">
+              <h3>Chrome dinosaur</h3>
+              <p>Run, duck, and jump past cacti in this offline legend.</p>
+              <span class="game-card__meta">Endless runner</span>
+              <a class="btn btn-primary" href="./games/chrome-dinosaur/index.html">Play now</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-game-card>
+            <img src="./assets/images/game-thumbnails/flappy-bird.png" alt="Flappy Bird gameplay" />
+            <div class="game-card__body">
+              <h3>Flappy Bird</h3>
+              <p>Time your clicks to navigate infinite pipes with precision.</p>
+              <span class="game-card__meta">One-click arcade</span>
+              <a class="btn btn-primary" href="./games/flappy-bird/index.html">Play now</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="auth-panels" id="auth">
+        <div class="auth-panel">
+          <h2>Log in</h2>
+          <p>Access your profile, sync progress, and keep the streak alive.</p>
+          <form id="loginForm" autocomplete="on">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" name="password" type="password" placeholder="••••••••" required />
+
+            <button class="btn btn-primary" type="submit">Login</button>
+            <div class="form-helper">
+              New here?
+              <a href="./pages/signup.html">Create an account</a>
+            </div>
+            <p class="message" data-auth-message="login" hidden></p>
+          </form>
+        </div>
+
+        <div class="auth-panel">
+          <h2>Sign up</h2>
+          <p>Keep your high scores across any deployment environment.</p>
+          <form id="signupForm" autocomplete="on">
+            <label for="signupName">Display name</label>
+            <input id="signupName" name="displayName" type="text" placeholder="Player One" required />
+
+            <label for="signupEmail">Email</label>
+            <input id="signupEmail" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" name="password" type="password" placeholder="At least 6 characters" required />
+
+            <button class="btn btn-secondary" type="submit">Create account</button>
+            <p class="message" data-auth-message="signup" hidden></p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span data-current-year></span> Gaming Platform</span>
+      <a href="./README.md" target="_blank" rel="noopener noreferrer">Project documentation</a>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="./assets/js/firebase-config.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
+

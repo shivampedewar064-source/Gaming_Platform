@@ -1,0 +1,130 @@
+:root {
+  --gp-panel: #0f172a;
+  --gp-border: #233250;
+  --gp-muted: #94a3b8;
+  --gp-accent: #0ef1c1;
+  --gp-danger: #f87171;
+}
+
+body.game-page {
+  min-height: 100vh;
+  /* Pure image background for game pages */
+  background: url("../images/game-thumbnails/main_bg.jpeg") center/cover fixed no-repeat;
+  padding: 0;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(2, 4, 12, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.game-header .brand img {
+  width: 120px;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+.game-panel {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.game-panel h1,
+.game-panel h2 {
+  margin-top: 0;
+}
+
+.game-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.game-meta .badge {
+  background: rgba(14, 241, 193, 0.12);
+  border: 1px solid rgba(14, 241, 193, 0.4);
+  color: var(--gp-accent);
+}
+
+.game-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.game-frame {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.game-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.game-actions a {
+  text-decoration: none;
+}
+
+.game-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--gp-accent);
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--gp-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.game-assets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.game-assets img {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.game-footer-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--gp-muted);
+}
+
+@media (max-width: 720px) {
+  .game-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

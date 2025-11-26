@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View your Gaming Platform profile, synced with Firebase Authentication."
+    />
+    <title>Profile | Gaming Platform</title>
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <img src="../assets/images/logo.png" alt="Gaming Platform logo" />
+        <div>
+          <span class="brand__title">Gaming Platform</span>
+          <span class="brand__tagline">Player profile</span>
+        </div>
+      </div>
+      <nav class="primary-nav" id="siteNav" aria-label="Primary navigation">
+        <a class="nav-link nav-link--ghost" href="../index.html">Home</a>
+        <a class="nav-link nav-link--ghost" href="./about.html">About</a>
+        <button class="nav-link nav-link--ghost" data-logout data-show-when="signed-in" hidden>
+          Logout
+        </button>
+        <a class="nav-link nav-link--primary" href="./login.html" data-show-when="signed-out"
+          >Login</a
+        >
+      </nav>
+    </header>
+
+    <main style="padding-top: 3rem">
+      <section class="info-panels">
+        <article class="info-card" data-section="signed-in" hidden>
+          <h2>Player overview</h2>
+          <p>Welcome back, <strong data-user-name>Player</strong>!</p>
+          <ul>
+            <li>Email: <span data-user-email>you@example.com</span></li>
+            <li>Favorite genre: Arcade</li>
+            <li>Status: Connected via Firebase Auth</li>
+          </ul>
+          <div class="game-actions" style="margin-top: 1rem">
+            <a class="btn btn-secondary" href="../index.html">Browse games</a>
+            <button class="btn btn-ghost" data-logout>Logout</button>
+          </div>
+        </article>
+
+        <article class="info-card" data-section="signed-out">
+          <h2>Sign in to continue</h2>
+          <p>
+            Profiles are only available to authenticated users. Please log in or create an account
+            to keep your progress synced across deployments.
+          </p>
+          <div class="game-actions">
+            <a class="btn btn-primary" href="./login.html">Login</a>
+            <a class="btn btn-secondary" href="./signup.html">Sign up</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span data-current-year></span> Gaming Platform</span>
+      <a href="../README.md" target="_blank" rel="noopener noreferrer">Docs</a>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
+
